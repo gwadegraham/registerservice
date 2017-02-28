@@ -44,6 +44,7 @@ public class Employee {
         return this;
     }
 
+    //TODO : Make sure this is correct type.
     private String role;
     public String getRole() { return this.role; }
     public Employee setRole(String role) {
@@ -79,5 +80,8 @@ public class Employee {
         this.password = "";
         this.active = false;
     }
+
+    //TODO : Create constructor once employee entity is created
+    //public Employee(EmployeeEntity employeeEntity) {}
 
 }
