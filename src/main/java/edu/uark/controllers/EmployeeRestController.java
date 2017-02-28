@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/employee")
 public class EmployeeRestController {
 
-    @RequestMapping(value = "/apiv0/login", method = RequestMethod.PUT)
+    @RequestMapping(value = "/login", method = RequestMethod.PUT)
     public Employee employeeLogin(Employee employee) {
 
         return (new EmployeeLoginQuery()).execute();
