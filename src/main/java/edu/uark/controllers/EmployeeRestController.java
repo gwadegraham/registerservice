@@ -4,6 +4,7 @@ import edu.uark.commands.employee.EmployeeLoginQuery;
 import edu.uark.models.api.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,4 +17,9 @@ public class EmployeeRestController {
         return (new EmployeeLoginQuery()).execute();
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test() {
+        return "Successful test. (EmployeeRestController)";
+    }
 }
