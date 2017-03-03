@@ -7,20 +7,25 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.UUID;
 
+import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
 import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.dataaccess.entities.BaseEntity;
 import edu.uark.models.api.Product;
 import edu.uark.models.entities.fieldnames.ProductFieldNames;
 import edu.uark.models.repositories.EmployeeRepository;
-import edu.uark.models.repositories.ProductRepository;
 
 public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	@Override
 	protected void fillFromRecord(ResultSet rs) throws SQLException {
+
+	    this.firstName = rs.getString(EmployeeFieldNames.FIRST_NAME);
+
+	    /*
 		this.lookupCode = rs.getString(ProductFieldNames.LOOKUP_CODE);
 		this.count = rs.getInt(ProductFieldNames.COUNT); 
 		this.createdOn = rs.getTimestamp(ProductFieldNames.CREATED_ON).toLocalDateTime();
+		*/
 	}
 
 	@Override
