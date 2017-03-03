@@ -31,7 +31,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		return record;
 	}
 
-	private String lookupCode;
+	private String lookupCode; 
 	public String getLookupCode() {
 		return this.lookupCode;
 	}

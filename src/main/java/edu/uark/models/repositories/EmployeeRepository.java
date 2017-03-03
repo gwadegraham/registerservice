@@ -1,5 +1,5 @@
 package edu.uark.models.repositories;
-
+import edu.uark.models.entities.EmployeeEntity;
 import java.sql.SQLException;
 
 import edu.uark.dataaccess.repository.BaseRepository;
@@ -10,11 +10,12 @@ import edu.uark.dataaccess.repository.helpers.where.WhereClause;
 import edu.uark.dataaccess.repository.helpers.where.WhereContainer;
 import edu.uark.models.entities.ProductEntity;
 import edu.uark.models.entities.fieldnames.ProductFieldNames;
+import edu.uark.models.repositories.interfaces.EmployeeRepositoryInterface;
 import edu.uark.models.repositories.interfaces.ProductRepositoryInterface;
 
-public class ProductRepository extends BaseRepository<ProductEntity> implements ProductRepositoryInterface {
+public class EmployeeRepository extends BaseRepository<EmployeeEntity> implements EmployeeRepositoryInterface {
 	@Override
-	public ProductEntity byLookupCode(String lookupCode) {
+	public EmployeeEntity byLookupCode(String lookupCode) {
 		return this.firstOrDefaultWhere(
 			new WhereContainer(
 				(new WhereClause()).
@@ -34,11 +35,11 @@ public class ProductRepository extends BaseRepository<ProductEntity> implements 
 	}
 	
 	@Override
-	public ProductEntity createOne() {
-		return new ProductEntity();
+	public EmployeeEntity createOne() {
+		return new EmployeeEntity();
 	}
 	
-	public ProductRepository() {
+	public EmployeeRepository() {
 		super(DatabaseTable.PRODUCT);
 	}
 }

@@ -6,3 +6,4 @@ import edu.uark.models.entities.ProductEntity;
 public interface ProductRepositoryInterface extends BaseRepositoryInterface<ProductEntity> {
 	ProductEntity byLookupCode(String lookupCode);
 }
+
