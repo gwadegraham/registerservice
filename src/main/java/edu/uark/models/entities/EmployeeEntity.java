@@ -11,6 +11,7 @@ import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
 import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.dataaccess.entities.BaseEntity;
+import edu.uark.dataaccess.entities.BaseFieldNames;
 import edu.uark.models.api.Product;
 import edu.uark.models.entities.fieldnames.ProductFieldNames;
 import edu.uark.models.repositories.EmployeeRepository;
@@ -20,6 +21,15 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	protected void fillFromRecord(ResultSet rs) throws SQLException {
 
 	    this.firstName = rs.getString(EmployeeFieldNames.FIRST_NAME);
+	    this.lastName = rs.getString(EmployeeFieldNames.LAST_NAME);
+	    this.employeeID = rs.getString(EmployeeFieldNames.EMPLOYEE_ID);
+	    this.active = rs.getBoolean(EmployeeFieldNames.ACTIVE);
+	    this.currentRole = rs.getString(EmployeeFieldNames.CURRENT_ROLE);
+	    this.managerID = ((UUID) rs.getObject(EmployeeFieldNames.MANAGER_ID));
+	    this.password= rs.getString(EmployeeFieldNames.PASSWORD);
+	    this.created_On= rs.getString(EmployeeFieldNames.CREATED_ON);
+	    
+	    //this.id = ((UUID) rs.getObject(BaseFieldNames.ID));
 
 	    /*
 		this.lookupCode = rs.getString(ProductFieldNames.LOOKUP_CODE);
@@ -33,6 +43,8 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 		record.put(ProductFieldNames.LOOKUP_CODE, this.lookupCode);
 		record.put(ProductFieldNames.COUNT, this.count);
 		record.put(ProductFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
+		
+		
 		
 		return record;
 	}
