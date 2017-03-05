@@ -80,6 +80,16 @@ public class Employee {
         this.password = "";
         this.active = false;
     }
+    
+    //Added by sangyun
+	private int countEmployee;
+	public int getCount() {
+		return this.countEmployee;
+	}
+	public Employee setCount(int count) {
+		this.countEmployee = count;
+		return this;
+	}
 
     //TODO : Create constructor once employee entity is created
     //public Employee(EmployeeEntity employeeEntity) {}

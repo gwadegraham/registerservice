@@ -26,7 +26,7 @@ public class EmployeeRestController {
     
     //sangyunnn
     @RequestMapping(value = "/check", method = RequestMethod.GET)
-    public EmployeeCount check() {
-    	return (new EmployeeCount());
+    public Employee check() {
+    	return new Employee();
     }
 }
