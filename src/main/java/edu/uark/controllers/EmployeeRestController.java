@@ -23,4 +23,10 @@ public class EmployeeRestController {
     public String test() {
         return "Successful test. (EmployeeRestController)";
     }
+    
+    //sangyunnn
+    @RequestMapping(value = "/check", method = RequestMethod.GET)
+    public EmployeeCount check() {
+    	return (new EmployeeCount());
+    }
 }
