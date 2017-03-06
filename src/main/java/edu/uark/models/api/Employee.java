@@ -126,15 +126,7 @@ public class Employee {
         this.apiRequestStatus = EmployeeApiRequestStatus.OK;
     }
     
-    //Added by sangyun
-	private int countEmployee;
-	public int getCount() {
-		return this.countEmployee;
-	}
-	public Employee setCount(int count) {
-		this.countEmployee = count;
-		return this;
-	}
+
 
     public Employee(EmployeeEntity employeeEntity) {
 
