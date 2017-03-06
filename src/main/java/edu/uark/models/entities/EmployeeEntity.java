@@ -1,5 +1,6 @@
 package edu.uark.models.entities;
 
+import java.rmi.registry.LocateRegistry;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -7,45 +8,39 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.UUID;
 
+import edu.uark.models.api.Employee;
 import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
 import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.dataaccess.entities.BaseEntity;
-import edu.uark.dataaccess.entities.BaseFieldNames;
-import edu.uark.models.api.Product;
-import edu.uark.models.entities.fieldnames.ProductFieldNames;
 import edu.uark.models.repositories.EmployeeRepository;
 
 public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	@Override
 	protected void fillFromRecord(ResultSet rs) throws SQLException {
 
+		this.employeeID = rs.getString(EmployeeFieldNames.EMPLOYEE_ID);
 	    this.firstName = rs.getString(EmployeeFieldNames.FIRST_NAME);
 	    this.lastName = rs.getString(EmployeeFieldNames.LAST_NAME);
-	    this.employeeID = rs.getString(EmployeeFieldNames.EMPLOYEE_ID);
 	    this.active = rs.getBoolean(EmployeeFieldNames.ACTIVE);
 	    this.currentRole = rs.getString(EmployeeFieldNames.CURRENT_ROLE);
 	    this.managerID = ((UUID) rs.getObject(EmployeeFieldNames.MANAGER_ID));
 	    this.password= rs.getString(EmployeeFieldNames.PASSWORD);
-	    this.created_On= rs.getString(EmployeeFieldNames.CREATED_ON);
-	    
-	    //this.id = ((UUID) rs.getObject(BaseFieldNames.ID));
-
-	    /*
-		this.lookupCode = rs.getString(ProductFieldNames.LOOKUP_CODE);
-		this.count = rs.getInt(ProductFieldNames.COUNT); 
-		this.createdOn = rs.getTimestamp(ProductFieldNames.CREATED_ON).toLocalDateTime();
-		*/
+	    this.createdOn= rs.getTimestamp(EmployeeFieldNames.CREATED_ON).toLocalDateTime();
 	}
 
 	@Override
 	protected Map<String, Object> fillRecord(Map<String, Object> record) {
-		record.put(ProductFieldNames.LOOKUP_CODE, this.lookupCode);
-		record.put(ProductFieldNames.COUNT, this.count);
-		record.put(ProductFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
-		
-		
-		
+
+	    record.put(EmployeeFieldNames.EMPLOYEE_ID, this.employeeID);
+        record.put(EmployeeFieldNames.FIRST_NAME, this.firstName);
+        record.put(EmployeeFieldNames.LAST_NAME, this.lastName);
+        record.put(EmployeeFieldNames.ACTIVE, this.active);
+        record.put(EmployeeFieldNames.CURRENT_ROLE, this.currentRole);
+        record.put(EmployeeFieldNames.MANAGER_ID, this.managerID);
+        record.put(EmployeeFieldNames.PASSWORD, this.password);
+        record.put(EmployeeFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
+
 		return record;
 	}
 	
@@ -56,14 +51,13 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	private boolean active; 
 	private String currentRole;
 	private UUID managerID; 
-	private String password; 
-	private String created_On; 
+	private String password;
 	
 	////////////////////////////////////////////////////
-	public void setFirstName(String firstname)
+	public void setFirstName(String firstName)
 	{
 		
-		this.firstName = firstname; 
+		this.firstName = firstName;
 	}
 	
 	public String getFirstName(){
@@ -72,10 +66,10 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	
 	
 	////////////////////////////////////////////////////
-	public void setLastName(String lastname)
+	public void setLastName(String lastName)
 	{
 		
-		this.lastName = lastname; 
+		this.lastName = lastName;
 	}
 	
 	public String getLastName (){
@@ -143,90 +137,65 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	{
 		return password;
 	}
-	
-	
-	
-	/////////////////////////////////////////////////////
-	public void setCreated_On(String createdon)
-	{
 
-		this.created_On = createdon; 
-	}
-
-	public String getCreated_On()
-	{
-		return created_On;
-	}
-
-
-	
 
 //-------------------------------------------end of "from registerddls"--------------//
-	
-	
-	
-	private String lookupCode; 
-	public String getLookupCode() {
-		return this.lookupCode;
-	}
-	public EmployeeEntity setLookupCode(String lookupCode) {
-		if (!StringUtils.equals(this.lookupCode, lookupCode)) {
-			this.lookupCode = lookupCode;
-			this.propertyChanged(ProductFieldNames.LOOKUP_CODE);
-		}
-		
-		return this;
-	}
-
-	private int count;
-	public int getCount() {
-		return this.count;
-	}
-	public EmployeeEntity setCount(int count) {
-		if (this.count != count) {
-			this.count = count;
-			this.propertyChanged(ProductFieldNames.COUNT);
-		}
-		
-		return this;
-	}
 
 	private LocalDateTime createdOn;
 	public LocalDateTime getCreatedOn() {
 		return this.createdOn;
 	}
-	
-	public Product synchronize(Product apiProduct) {
-		this.setCount(apiProduct.getCount());
-		this.setLookupCode(apiProduct.getLookupCode());
-		
-		apiProduct.setCreatedOn(this.createdOn);
-		
-		return apiProduct;
-	}
-	
-	public EmployeeEntity() {
-		super(new EmployeeRepository());
-		
-		this.count = -1;
-		this.lookupCode = StringUtils.EMPTY;
-		this.createdOn = LocalDateTime.now();
-	}
-	
-	public EmployeeEntity(UUID id) {
-		super(id, new EmployeeRepository());
-		
-		this.count = -1;
-		this.lookupCode = StringUtils.EMPTY;
-		this.createdOn = LocalDateTime.now();
-	}
 
-	public EmployeeEntity(Product apiProduct) {
-		super(apiProduct.getId(), new EmployeeRepository());
-		
-		this.count = apiProduct.getCount();
-		this.lookupCode = apiProduct.getLookupCode();
+	public Employee synchronize(Employee apiEmployee) {
 
-		this.createdOn = LocalDateTime.now();
-	}
+	    this.setEmployeeID(apiEmployee.getEmployeeId());
+	    this.setFirstName(apiEmployee.getFirstName());
+	    this.setLastName(apiEmployee.getLastName());
+	    this.setActive(apiEmployee.getActive());
+	    this.setCurrentRole(apiEmployee.getRole());
+	    this.setManagerID(apiEmployee.getManagerId());
+	    this.setPassword(apiEmployee.getPassword());
+	    apiEmployee.setCreatedOn(this.createdOn);
+	    return apiEmployee;
+    }
+
+    public EmployeeEntity() {
+
+	    super(new EmployeeRepository());
+	    this.employeeID = StringUtils.EMPTY;
+        this.managerID = new UUID(0, 0);
+        this.firstName = "";
+        this.lastName = "";
+        this.currentRole = "";
+        this.password = "";
+        this.active = false;
+        this.createdOn = LocalDateTime.now();
+    }
+
+    public EmployeeEntity(UUID id) {
+
+	    super(id, new EmployeeRepository());
+        this.employeeID = StringUtils.EMPTY;
+        this.managerID = new UUID(0, 0);
+        this.firstName = "";
+        this.lastName = "";
+        this.currentRole = "";
+        this.password = "";
+        this.active = false;
+        this.createdOn = LocalDateTime.now();
+    }
+
+    public EmployeeEntity(Employee apiEmployee) {
+
+	    super(apiEmployee.getId(), new EmployeeRepository());
+
+	    this.employeeID = apiEmployee.getEmployeeId();
+	    this.managerID = apiEmployee.getManagerId();
+	    this.firstName = apiEmployee.getFirstName();
+	    this.lastName = apiEmployee.getLastName();
+	    this.currentRole = apiEmployee.getRole();
+	    this.password = apiEmployee.getPassword();
+	    this.active = apiEmployee.getActive();
+	    this.createdOn = LocalDateTime.now();
+    }
 }

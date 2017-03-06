@@ -1,5 +1,9 @@
 package edu.uark.models.api;
 
+import edu.uark.models.api.enums.EmployeeApiRequestStatus;
+import edu.uark.models.entities.EmployeeEntity;
+import org.apache.commons.lang3.StringUtils;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Employee {
@@ -44,7 +48,6 @@ public class Employee {
         return this;
     }
 
-    //TODO : Make sure this is correct type.
     private String role;
     public String getRole() { return this.role; }
     public Employee setRole(String role) {
@@ -69,6 +72,44 @@ public class Employee {
         return this;
     }
 
+    private LocalDateTime createdOn;
+    public LocalDateTime getCreatedOn() { return this.createdOn; }
+    public Employee setCreatedOn(LocalDateTime createdOn) {
+
+        this.createdOn = createdOn;
+        return this;
+    }
+
+    private EmployeeApiRequestStatus apiRequestStatus;
+    public EmployeeApiRequestStatus getApiRequestStatus() {
+
+        return apiRequestStatus;
+    }
+    public Employee setApiRequestStatus(EmployeeApiRequestStatus apiRequestStatus) {
+
+        if (this.apiRequestStatus != apiRequestStatus) {
+
+            this.apiRequestStatus = apiRequestStatus;
+        }
+
+        return this;
+    }
+
+    private String apiRequestMessage;
+    public String getApiRequestMessage() {
+
+        return this.apiRequestMessage;
+    }
+    public Employee setApiRequestMessage(String apiRequestMessage) {
+
+        if (!StringUtils.equalsIgnoreCase(this.apiRequestMessage, apiRequestMessage)) {
+
+            this.apiRequestMessage = apiRequestMessage;
+        }
+
+        return this;
+    }
+
     public Employee() {
 
         this.id = new UUID(0, 0);
@@ -79,6 +120,10 @@ public class Employee {
         this.role = "";
         this.password = "";
         this.active = false;
+        this.createdOn = LocalDateTime.now();
+
+        this.apiRequestMessage = StringUtils.EMPTY;
+        this.apiRequestStatus = EmployeeApiRequestStatus.OK;
     }
     
     //Added by sangyun
@@ -91,7 +136,20 @@ public class Employee {
 		return this;
 	}
 
-    //TODO : Create constructor once employee entity is created
-    //public Employee(EmployeeEntity employeeEntity) {}
+    public Employee(EmployeeEntity employeeEntity) {
+
+	    this.id = employeeEntity.getId();
+	    this.managerId = employeeEntity.getManagerID();
+	    this.firstName = employeeEntity.getFirstName();
+	    this.lastName = employeeEntity.getLastName();
+	    this.employeeId = employeeEntity.getEmployeeID();
+	    this.role = employeeEntity.getCurrentRole();
+	    this.password = employeeEntity.getPassword();
+	    this.active = employeeEntity.getActive();
+	    this.createdOn = employeeEntity.getCreatedOn();
+
+        this.apiRequestMessage = StringUtils.EMPTY;
+        this.apiRequestStatus = EmployeeApiRequestStatus.OK;
+    }
 
 }
