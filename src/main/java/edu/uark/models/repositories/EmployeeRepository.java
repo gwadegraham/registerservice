@@ -21,14 +21,14 @@ public class EmployeeRepository extends BaseRepository<EmployeeEntity> implement
 		return this.firstOrDefaultWhere(
 				new WhereContainer(
 						(new WhereClause()).
-								postgreFunction(PostgreFunctionType.LOWER).
+								//postgreFunction(PostgreFunctionType.LOWER).// EmployeeID is a string of numbers, no need to convert to lowercase.
 								table(this.primaryTable).
 								fieldName(EmployeeFieldNames.EMPLOYEE_ID).
 								comparison(SQLComparisonType.EQUALS)
 				),
 				(ps) -> {
 					try {
-						ps.setObject(1, employeeId.toLowerCase());
+						ps.setObject(1, employeeId); //  removed call toLowerCase() here
 					} catch (SQLException e) {}
 
 					return ps;
