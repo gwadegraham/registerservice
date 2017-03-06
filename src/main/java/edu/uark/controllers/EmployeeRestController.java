@@ -25,7 +25,7 @@ public class EmployeeRestController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/login/{employeeId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/login/{employeeId}:{password}", method = RequestMethod.GET)
     public String testEmployeeId(@PathVariable String employeeId) { return employeeId; }
     
     //sangyunnn
