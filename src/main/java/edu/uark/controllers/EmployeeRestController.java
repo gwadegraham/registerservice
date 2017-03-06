@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeRestController {
 
 
-    /* INITIAL TEST */
+    //TODO : RESTful link and test if it actually works (command)
     @RequestMapping(value = "/login/{employeeId}:{password}", method = RequestMethod.PUT)
     public Employee employeeLogin(Employee employee, @PathVariable String employeeId, @PathVariable String password) {
 
