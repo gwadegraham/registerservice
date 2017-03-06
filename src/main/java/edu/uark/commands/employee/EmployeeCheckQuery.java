@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.commands.ResultCommandInterface;
 import edu.uark.models.api.Employee;
-import edu.uark.models.api.Product;
 import edu.uark.models.api.enums.EmployeeApiRequestStatus;
 import edu.uark.models.api.enums.ProductApiRequestStatus;
 import edu.uark.models.entities.EmployeeEntity;
