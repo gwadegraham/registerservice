@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="Continued implementation of  Employee, EmployeeEntity, EmployeeRepository.&#10;Initial completion of Employee implementation for 7.3&#10;Initial completion of command for login query.&#10;Created EmployeeApiRequestStatus class.&#10;Added 'employee' table to DatabaseTable class.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java" />
+    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/dataaccess/repository/DatabaseTable.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/dataaccess/repository/DatabaseTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/fieldnames/EmployeeFieldNames.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/fieldnames/EmployeeFieldNames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/EmployeeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/EmployeeRepositoryInterface.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/EmployeeRepositoryInterface.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeEntity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1484">
+            <state relative-caret-position="1224">
               <caret line="70" column="8" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeLoginQuery.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeLoginQuery.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="198">
+              <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
       </list>
     </option>
   </component>
@@ -1178,7 +1170,7 @@
       <workItem from="1488232970135" duration="8634000" />
       <workItem from="1488295528510" duration="3152000" />
       <workItem from="1488565218224" duration="2292000" />
-      <workItem from="1488777289316" duration="5107000" />
+      <workItem from="1488777289316" duration="5222000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1208,11 +1200,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488566228172</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Continued implementation of  Employee, EmployeeEntity, EmployeeRepository.&#10;Initial completion of Employee implementation for 7.3&#10;Initial completion of command for login query.&#10;Created EmployeeApiRequestStatus class.&#10;Added 'employee' table to DatabaseTable class.&#10;">
+      <created>1488782408098</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1488782408098</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19770000" />
+    <option name="totallyTimeSpent" value="19885000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1240,7 +1239,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1528,16 +1527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/commands/products/ProductByLookupCodeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1550,16 +1539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2250">
           <caret line="125" column="60" lean-forward="false" selection-start-line="125" selection-start-column="60" selection-end-line="125" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1587,10 +1566,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1484">
+        <state relative-caret-position="1224">
           <caret line="70" column="8" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

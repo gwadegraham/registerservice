@@ -8,6 +8,8 @@ import edu.uark.models.repositories.EmployeeRepository;
 import edu.uark.models.repositories.interfaces.EmployeeRepositoryInterface;
 import org.apache.commons.lang3.StringUtils;
 
+
+//TODO : Also need to check for password
 public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
 
 
