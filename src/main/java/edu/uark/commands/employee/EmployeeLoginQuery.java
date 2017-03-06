@@ -13,7 +13,25 @@ import org.apache.commons.lang3.StringUtils;
 public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
 
 
+    private EmployeeRepositoryInterface employeeRepository;
     private String employeeId;
+    private String password;
+
+    /**
+     * Getter and Setter for password
+     * @return password
+     */
+    public String getPassword() { return this.password; }
+    public EmployeeLoginQuery setEmployeePassword(String password) {
+
+        this.password = password;
+        return this;
+    }
+
+    /**
+     * Getter and Setter for employeeId
+     * @return employeeId
+     */
     public String getEmployeeId() { return this.employeeId; }
     public EmployeeLoginQuery setEmployeeId(String employeeId) {
 
@@ -21,7 +39,10 @@ public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
         return this;
     }
 
-    private EmployeeRepositoryInterface employeeRepository;
+    /**
+     * Getter and Setter for employeeRepository
+     * @return employeeRepository
+     */
     public EmployeeRepositoryInterface getEmployeeRepositoryInterface() { return this.employeeRepository; }
     public EmployeeLoginQuery setEmployeeReposity(EmployeeRepositoryInterface employeeReposity) {
 
@@ -45,7 +66,13 @@ public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
         EmployeeEntity employeeEntity = this.employeeRepository.byEmployeeId(this.employeeId);
         if (employeeEntity != null) {
 
-            return new Employee(employeeEntity);
+            if (employeeEntity.getPassword().equalsIgnoreCase(this.password)) {
+
+                return new Employee(employeeEntity);
+            } else {
+
+                return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.INVALID_PASSWORD);
+            }
         } else {
 
             return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.NOT_FOUND);

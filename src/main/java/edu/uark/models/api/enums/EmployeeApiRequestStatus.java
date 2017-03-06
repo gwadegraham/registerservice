@@ -11,7 +11,8 @@ public enum EmployeeApiRequestStatus {
     INVALID_INPUT(1),
     UNKNOWN_ERROR(2),
     NOT_FOUND(3),
-    EMPLOYEE_ID_ALREADY_EXISTS(4);
+    EMPLOYEE_ID_ALREADY_EXISTS(4),
+    INVALID_PASSWORD(5);
 
     private int value;
     private static Map<Integer, EmployeeApiRequestStatus> valueMap = null;
