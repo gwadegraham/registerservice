@@ -22,7 +22,7 @@ public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
      * @return password
      */
     public String getPassword() { return this.password; }
-    public EmployeeLoginQuery setEmployeePassword(String password) {
+    public EmployeeLoginQuery setPassword(String password) {
 
         this.password = password;
         return this;

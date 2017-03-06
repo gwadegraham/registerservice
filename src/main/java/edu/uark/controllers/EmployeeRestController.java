@@ -10,11 +10,12 @@ public class EmployeeRestController {
 
 
     /* INITIAL TEST */
-    @RequestMapping(value = "/login/{employeeId}", method = RequestMethod.PUT)
-    public Employee employeeLogin(Employee employee, @PathVariable String employeeId) {
+    @RequestMapping(value = "/login/{employeeId}:{password}", method = RequestMethod.PUT)
+    public Employee employeeLogin(Employee employee, @PathVariable String employeeId, @PathVariable String password) {
 
         return (new EmployeeLoginQuery()).
                 setEmployeeId(employeeId).
+                setPassword(password).
                 execute();
     }
 
@@ -23,10 +24,6 @@ public class EmployeeRestController {
     public String test() {
         return "Successful test. (EmployeeRestController)";
     }
-
-    @ResponseBody
-    @RequestMapping(value = "/login/{employeeId}:{password}", method = RequestMethod.GET)
-    public String testEmployeeId(@PathVariable String employeeId, @PathVariable String password) { return employeeId + " " + password; }
     
     //sangyunnn
     @RequestMapping(value = "/check", method = RequestMethod.GET)
