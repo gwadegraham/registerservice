@@ -174,6 +174,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	    this.setManagerID(apiEmployee.getManagerId());
 	    this.setPassword(apiEmployee.getPassword());
 	    apiEmployee.setCreatedOn(this.createdOn);
+	    this.setCount(apiEmployee.getCount());
 	    return apiEmployee;
     }
 
