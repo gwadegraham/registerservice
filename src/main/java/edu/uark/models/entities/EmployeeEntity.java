@@ -10,6 +10,8 @@ import java.util.UUID;
 
 import edu.uark.models.api.Employee;
 import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
+import edu.uark.models.entities.fieldnames.ProductFieldNames;
+
 import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.dataaccess.entities.BaseEntity;
@@ -27,6 +29,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	    this.managerID = ((UUID) rs.getObject(EmployeeFieldNames.MANAGER_ID));
 	    this.password= rs.getString(EmployeeFieldNames.PASSWORD);
 	    this.createdOn= rs.getTimestamp(EmployeeFieldNames.CREATED_ON).toLocalDateTime();
+	    this.count= rs.getInt(EmployeeFieldNames.COUNT);
 	}
 
 	@Override
@@ -40,6 +43,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
         record.put(EmployeeFieldNames.MANAGER_ID, this.managerID);
         record.put(EmployeeFieldNames.PASSWORD, this.password);
         record.put(EmployeeFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
+        record.put(EmployeeFieldNames.COUNT, this.count);
 
 		return record;
 	}
@@ -52,6 +56,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	private String currentRole;
 	private UUID managerID; 
 	private String password;
+	
 	
 	////////////////////////////////////////////////////
 	public void setFirstName(String firstName)
@@ -136,6 +141,19 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	public String getPassword()
 	{
 		return password;
+	}
+	
+	private int count;
+	public int getCount() {
+		return this.count;
+	}
+	public EmployeeEntity setCount(int count) {
+		if (this.count != count) {
+			this.count = count;
+			this.propertyChanged(EmployeeFieldNames.COUNT);
+		}
+		
+		return this;
 	}
 
 
