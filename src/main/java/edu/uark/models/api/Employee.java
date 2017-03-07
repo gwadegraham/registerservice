@@ -153,6 +153,7 @@ public class Employee {
 
         this.apiRequestMessage = StringUtils.EMPTY;
         this.apiRequestStatus = EmployeeApiRequestStatus.OK;
+        this.countEmployee = employeeEntity.getCount();
     }
 
 }
