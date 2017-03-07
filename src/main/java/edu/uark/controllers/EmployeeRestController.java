@@ -2,7 +2,6 @@ package edu.uark.controllers;
 
 import edu.uark.commands.employee.EmployeeLoginQuery;
 import edu.uark.models.api.Employee;
-import edu.uark.models.api.EmployeeCheck;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -27,9 +26,9 @@ public class EmployeeRestController {
         return "Successful test. (EmployeeRestController)";
     }
     
-    //sangyunnn
+    //sangyun
     @RequestMapping(value = "/check", method = RequestMethod.GET)
-    public EmployeeCheck check() {
-    	return new EmployeeCheck();
+    public Employee check() {
+    	return new Employee();
     }
 }
