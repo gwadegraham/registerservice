@@ -109,6 +109,16 @@ public class Employee {
 
         return this;
     }
+    
+	private int countEmployee;
+	public int getCount() {
+		return this.countEmployee;
+	}
+	public Employee setCount(int count) {
+		this.countEmployee = count;
+		return this;
+	}
+	
 
     public Employee() {
 
@@ -124,6 +134,7 @@ public class Employee {
 
         this.apiRequestMessage = StringUtils.EMPTY;
         this.apiRequestStatus = EmployeeApiRequestStatus.OK;
+        this.countEmployee = -1;
     }
     
 
