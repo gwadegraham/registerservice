@@ -188,6 +188,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
         this.password = "";
         this.active = false;
         this.createdOn = LocalDateTime.now();
+        this.count = -1;
     }
 
     public EmployeeEntity(UUID id) {
@@ -201,6 +202,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
         this.password = "";
         this.active = false;
         this.createdOn = LocalDateTime.now();
+        this.count = -1;
     }
 
     public EmployeeEntity(Employee apiEmployee) {
@@ -215,5 +217,6 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 	    this.password = apiEmployee.getPassword();
 	    this.active = apiEmployee.getActive();
 	    this.createdOn = LocalDateTime.now();
+	    this.count = apiEmployee.getCount();
     }
 }
