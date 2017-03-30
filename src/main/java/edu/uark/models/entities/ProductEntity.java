@@ -18,14 +18,14 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	@Override
 	protected void fillFromRecord(ResultSet rs) throws SQLException {
 		this.lookupCode = rs.getString(ProductFieldNames.LOOKUP_CODE);
-		this.count = rs.getInt(ProductFieldNames.COUNT);
+		this.quantity = rs.getInt(ProductFieldNames.QUANTITY);
 		this.createdOn = rs.getTimestamp(ProductFieldNames.CREATED_ON).toLocalDateTime();
 	}
 
 	@Override
 	protected Map<String, Object> fillRecord(Map<String, Object> record) {
 		record.put(ProductFieldNames.LOOKUP_CODE, this.lookupCode);
-		record.put(ProductFieldNames.COUNT, this.count);
+		record.put(ProductFieldNames.COUNT, this.quantity);
 		record.put(ProductFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
 		
 		return record;
@@ -44,13 +44,13 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		return this;
 	}
 
-	private int count;
+	private int quantity;
 	public int getCount() {
-		return this.count;
+		return this.quantity;
 	}
 	public ProductEntity setCount(int count) {
-		if (this.count != count) {
-			this.count = count;
+		if (this.quantity != count) {
+			this.quantity = count;
 			this.propertyChanged(ProductFieldNames.COUNT);
 		}
 		
@@ -74,7 +74,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	public ProductEntity() {
 		super(new ProductRepository());
 		
-		this.count = -1;
+		this.quantity = -1;
 		this.lookupCode = StringUtils.EMPTY;
 		this.createdOn = LocalDateTime.now();
 	}
@@ -82,7 +82,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	public ProductEntity(UUID id) {
 		super(id, new ProductRepository());
 		
-		this.count = -1;
+		this.quantity = -1;
 		this.lookupCode = StringUtils.EMPTY;
 		this.createdOn = LocalDateTime.now();
 	}
@@ -90,7 +90,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	public ProductEntity(Product apiProduct) {
 		super(apiProduct.getId(), new ProductRepository());
 		
-		this.count = apiProduct.getCount();
+		this.quantity = apiProduct.getCount();
 		this.lookupCode = apiProduct.getLookupCode();
 
 		this.createdOn = LocalDateTime.now();
