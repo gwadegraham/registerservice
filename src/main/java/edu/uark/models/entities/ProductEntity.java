@@ -25,7 +25,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	@Override
 	protected Map<String, Object> fillRecord(Map<String, Object> record) {
 		record.put(ProductFieldNames.LOOKUP_CODE, this.lookupCode);
-		record.put(ProductFieldNames.COUNT, this.quantity);
+		record.put(ProductFieldNames.QUANTITY, this.quantity);
 		record.put(ProductFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
 		
 		return record;
@@ -45,13 +45,13 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	}
 
 	private int quantity;
-	public int getCount() {
+	public int getQuantity() {
 		return this.quantity;
 	}
-	public ProductEntity setCount(int count) {
-		if (this.quantity != count) {
-			this.quantity = count;
-			this.propertyChanged(ProductFieldNames.COUNT);
+	public ProductEntity setQuantity(int quantity) {
+		if (this.quantity != quantity) {
+			this.quantity = quantity;
+			this.propertyChanged(ProductFieldNames.QUANTITY);
 		}
 		
 		return this;
@@ -63,7 +63,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	}
 	
 	public Product synchronize(Product apiProduct) {
-		this.setCount(apiProduct.getCount());
+		this.setQuantity(apiProduct.getQuantity());
 		this.setLookupCode(apiProduct.getLookupCode());
 		
 		apiProduct.setCreatedOn(this.createdOn);
@@ -90,7 +90,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 	public ProductEntity(Product apiProduct) {
 		super(apiProduct.getId(), new ProductRepository());
 		
-		this.quantity = apiProduct.getCount();
+		this.quantity = apiProduct.getQuantity();
 		this.lookupCode = apiProduct.getLookupCode();
 
 		this.createdOn = LocalDateTime.now();
