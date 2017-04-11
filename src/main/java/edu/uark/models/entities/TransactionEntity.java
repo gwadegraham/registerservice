@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import edu.uark.models.api.Employee;
+import edu.uark.models.api.Product;
 import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
 import edu.uark.models.entities.fieldnames.ProductFieldNames;
 
@@ -16,46 +17,47 @@ import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.dataaccess.entities.BaseEntity;
 import edu.uark.models.repositories.EmployeeRepository;
+import edu.uark.models.repositories.ProductRepository;
 
-public class TransactionEntity extends Transaction<TransactionEntity> {	
+public class TransactionEntity extends BaseEntity<TransactionEntity> {	
 	
 	// some code here
-	// class Transaction not created as of yet
+	// model off of product entity everything N.B
+private String recordId;
+private String cashierId;
+private double totalPrice;
+private String transType;
+private String referenceId;
+private LocalDateTime createdOn;
 
 
-private String customerName;
-private int productCount; 
-private double totalPrice; 
-
-
-
-
-public void setCustomerName(String customer_name)
+public void setRecordId(String record_id)
 {
 
-this.customerName = customer_name;
+this.recordId = record_id;
 
 }
 
-public String getCustomerName()
+public String getRecordId()
 {
 	
-return customerName;
+return recordId;
 
 }
 
 
-public void setProductCount(int product_count)
+
+public void setCashierId(String cashier_id)
 {
 
-this.productCount = product_count;
+this.cashierId = cashier_id;
 
 }
 
-public int getProductCount()
+public String getCahierId()
 {
 	
-return productCount;
+return cashierId;
 
 }
 
@@ -73,9 +75,39 @@ return totalPrice;
 
 }
 
+public void setTransType(String transaction_type)
+{
+
+this.transType = transaction_type;
 
 }
 
+public String getTransType()
+{
+	
+return transType;
 
+}
 
+public void setReferenceId(String reference_id)
+{
+
+this.referenceId = reference_id;
+
+}
+
+public String getReferenceId()
+{
+	
+return referenceId;
+
+}
+
+public LocalDateTime getCreatedOn() {
+	return this.createdOn;
+}
+
+}
+
+// add FillRecord, FillFromRecord, Synchronize, Constructors (3) here  
 
