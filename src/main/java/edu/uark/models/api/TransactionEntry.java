@@ -41,22 +41,22 @@ public class TransactionEntry {
         this.productId = productId;
     }
 
-    private String amountSold;
-    public String getAmountSold() {
+    private int amountSold;
+    public int getAmountSold() {
 
         return this.amountSold;
     }
-    public void setAmountSold(String amountSold) {
+    public void setAmountSold(int amountSold) {
 
         this.amountSold = amountSold;
     }
 
-    private String soldPrice;
-    public String getSoldPrice() {
+    private double soldPrice;
+    public double getSoldPrice() {
 
         return this.soldPrice;
     }
-    public void setSoldPrice(String soldPrice) {
+    public void setSoldPrice(double soldPrice) {
 
         this.soldPrice = soldPrice;
     }
@@ -95,8 +95,8 @@ public class TransactionEntry {
 
         this.transactionId = StringUtils.EMPTY;
         this.productId = StringUtils.EMPTY;
-        this.amountSold = StringUtils.EMPTY;
-        this.soldPrice = StringUtils.EMPTY;
+        this.amountSold = 0;
+        this.soldPrice = 0;
     }
 
     public TransactionEntry(TransactionEntryEntity transactionEntryEntity) {

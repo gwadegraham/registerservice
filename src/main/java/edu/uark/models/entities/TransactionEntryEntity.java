@@ -21,8 +21,8 @@ public class TransactionEntryEntity extends BaseEntity<TransactionEntryEntity> {
 
         this.transactionId = rs.getString(TransactionEntryFieldNames.TRANSACTION_ID);
         this.productId = rs.getString(TransactionEntryFieldNames.PRODUCT_ID);
-        this.amountSold = rs.getString(TransactionEntryFieldNames.AMOUNT_SOLD);
-        this.soldPrice = rs.getString(TransactionEntryFieldNames.SOLD_PRICE);
+        this.amountSold = rs.getInt(TransactionEntryFieldNames.AMOUNT_SOLD);
+        this.soldPrice = rs.getDouble(TransactionEntryFieldNames.SOLD_PRICE);
     }
 
     @Override
@@ -56,22 +56,22 @@ public class TransactionEntryEntity extends BaseEntity<TransactionEntryEntity> {
         this.productId = productId;
     }
 
-    private String amountSold;
-    public String getAmountSold() {
+    private int amountSold;
+    public int getAmountSold() {
 
         return this.amountSold;
     }
-    public void setAmountSold(String amountSold) {
+    public void setAmountSold(int amountSold) {
 
         this.amountSold = amountSold;
     }
 
-    private String soldPrice;
-    public String getSoldPrice() {
+    private double soldPrice;
+    public double getSoldPrice() {
 
         return this.soldPrice;
     }
-    public void setSoldPrice(String soldPrice) {
+    public void setSoldPrice(double soldPrice) {
 
         this.soldPrice = soldPrice;
     }
@@ -90,8 +90,8 @@ public class TransactionEntryEntity extends BaseEntity<TransactionEntryEntity> {
         super(new TransactionEntryRepository());
         this.transactionId = StringUtils.EMPTY;
         this.productId = StringUtils.EMPTY;
-        this.amountSold = StringUtils.EMPTY;
-        this.soldPrice = StringUtils.EMPTY;
+        this.amountSold = 0;
+        this.soldPrice = 0;
     }
 
     public TransactionEntryEntity(UUID id) {
@@ -99,8 +99,8 @@ public class TransactionEntryEntity extends BaseEntity<TransactionEntryEntity> {
         super(id, new TransactionEntryRepository());
         this.transactionId = StringUtils.EMPTY;
         this.productId = StringUtils.EMPTY;
-        this.amountSold = StringUtils.EMPTY;
-        this.soldPrice = StringUtils.EMPTY;
+        this.amountSold = 0;
+        this.soldPrice = 0;
     }
 
     public TransactionEntryEntity(TransactionEntry apiTransactionEntry) {
@@ -109,7 +109,7 @@ public class TransactionEntryEntity extends BaseEntity<TransactionEntryEntity> {
 
         this.transactionId = StringUtils.EMPTY;
         this.productId = StringUtils.EMPTY;
-        this.amountSold = StringUtils.EMPTY;
-        this.soldPrice = StringUtils.EMPTY;
+        this.amountSold = 0;
+        this.soldPrice = 0;
     }
 }
