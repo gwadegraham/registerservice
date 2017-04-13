@@ -28,10 +28,10 @@ public class Product {
 	}
 	
 	private int quantity;
-	public int getCount() {
+	public int getQuantity() {
 		return this.quantity;
 	}
-	public Product setCount(int quantity) {
+	public Product setQuantity(int quantity) {
 		this.quantity = quantity;
 		return this;
 	}
@@ -80,7 +80,7 @@ public class Product {
 	
 	public Product(ProductEntity productEntity) {
 		this.id = productEntity.getId();
-		this.quantity = productEntity.getCount();
+		this.quantity = productEntity.getQuantity();
 		this.createdOn = productEntity.getCreatedOn();
 		this.lookupCode = productEntity.getLookupCode();
 

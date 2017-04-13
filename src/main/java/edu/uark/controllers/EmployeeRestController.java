@@ -1,5 +1,6 @@
 package edu.uark.controllers;
 
+import edu.uark.commands.employee.EmployeeSaveCommand;
 import edu.uark.commands.employee.EmployeeLoginQuery;
 import edu.uark.models.api.Employee;
 
@@ -17,6 +18,14 @@ public class EmployeeRestController {
         return (new EmployeeLoginQuery()).
                 setEmployeeId(employeeId).
                 setPassword(password).
+                execute();
+    }
+
+    @RequestMapping(value = "/create/{employeeId}", method = RequestMethod.GET)
+    public Employee testCreateEmployee(@PathVariable String employeeId) {
+
+        return (new EmployeeSaveCommand()).
+                setEmployeeId(employeeId).
                 execute();
     }
 
