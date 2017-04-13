@@ -1,81 +1,51 @@
-package edu.uark.commands.employee;
+package edu.uark.commands.employees;
+
+import org.apache.commons.lang3.StringUtils;
 
 import edu.uark.commands.ResultCommandInterface;
 import edu.uark.models.api.Employee;
+import edu.uark.models.api.EmployeeLogin;
 import edu.uark.models.api.enums.EmployeeApiRequestStatus;
 import edu.uark.models.entities.EmployeeEntity;
 import edu.uark.models.repositories.EmployeeRepository;
 import edu.uark.models.repositories.interfaces.EmployeeRepositoryInterface;
-import org.apache.commons.lang3.StringUtils;
 
-
-//TODO : Also need to check for password
 public class EmployeeLoginQuery implements ResultCommandInterface<Employee> {
+    @Override
+    public Employee execute() {
+        if (StringUtils.isBlank(this.employeeLogin.getEmployeeId())) {
+            return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.INVALID_INPUT);
+        }
 
+        EmployeeEntity employeeEntity = this.employeeRepository.byEmployeeId(this.employeeLogin.getEmployeeId());
+        if ((employeeEntity != null) && (employeeEntity.getPassword().equals(this.employeeLogin.getPassword()))) {
+            return new Employee(employeeEntity);
+        } else {
+            return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.NOT_FOUND);
+        }
+    }
+
+    //Properties
+    private EmployeeLogin employeeLogin;
+    public EmployeeLogin getEmployeeLogin() {
+        return this.employeeLogin;
+    }
+    public EmployeeLoginQuery setEmployeeLogin(EmployeeLogin employeeLogin) {
+        this.employeeLogin = employeeLogin;
+        return this;
+    }
 
     private EmployeeRepositoryInterface employeeRepository;
-    private String employeeId;
-    private String password;
-
-    /**
-     * Getter and Setter for password
-     * @return password
-     */
-    public String getPassword() { return this.password; }
-    public EmployeeLoginQuery setPassword(String password) {
-
-        this.password = password;
-        return this;
+    public EmployeeRepositoryInterface getProductRepository() {
+        return this.employeeRepository;
     }
-
-    /**
-     * Getter and Setter for employeeId
-     * @return employeeId
-     */
-    public String getEmployeeId() { return this.employeeId; }
-    public EmployeeLoginQuery setEmployeeId(String employeeId) {
-
-        this.employeeId = employeeId;
-        return this;
-    }
-
-    /**
-     * Getter and Setter for employeeRepository
-     * @return employeeRepository
-     */
-    public EmployeeRepositoryInterface getEmployeeRepositoryInterface() { return this.employeeRepository; }
-    public EmployeeLoginQuery setEmployeeReposity(EmployeeRepositoryInterface employeeReposity) {
-
-        this.employeeRepository = employeeReposity;
+    public EmployeeLoginQuery setProductRepository(EmployeeRepositoryInterface employeeRepository) {
+        this.employeeRepository = employeeRepository;
         return this;
     }
 
     public EmployeeLoginQuery() {
-
+        this.employeeLogin = new EmployeeLogin();
         this.employeeRepository = new EmployeeRepository();
-    }
-
-    @Override
-    public Employee execute() {
-
-        if (StringUtils.isBlank(this.employeeId)) {
-
-            return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.INVALID_INPUT);
-        }
-
-        EmployeeEntity employeeEntity = this.employeeRepository.byEmployeeId(this.employeeId);
-        if (employeeEntity != null) {
-
-            if (employeeEntity.getPassword().equalsIgnoreCase(this.password)) {
-
-                return new Employee(employeeEntity);
-            } else {
-
-                return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.INVALID_PASSWORD);
-            }
-        } else {
-
-            return new Employee().setApiRequestStatus(EmployeeApiRequestStatus.NOT_FOUND);
-        }
     }
 }
