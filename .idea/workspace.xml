@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeCheckQuery.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeCheckQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeSaveCommand.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeSaveCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/ProductRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/ProductRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/EmployeeApiRequestStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/EmployeeEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/fieldnames/EmployeeFieldNames.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/entities/fieldnames/EmployeeFieldNames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/EmployeeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/EmployeeRepositoryInterface.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/EmployeeRepositoryInterface.java" />
-    </list>
+    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -691,7 +678,7 @@
       <workItem from="1491938169571" duration="3784000" />
       <workItem from="1492116298146" duration="131000" />
       <workItem from="1492123118175" duration="1982000" />
-      <workItem from="1492126338484" duration="198000" />
+      <workItem from="1492126338484" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -774,7 +761,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40706000" />
+    <option name="totallyTimeSpent" value="40750000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
