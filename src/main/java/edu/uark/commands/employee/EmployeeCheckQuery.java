@@ -1,4 +1,4 @@
-package edu.uark.commands.employees;
+package edu.uark.commands.employee;
 
 import java.util.UUID;
 

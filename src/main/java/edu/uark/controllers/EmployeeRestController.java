@@ -20,24 +20,28 @@ import edu.uark.models.api.EmployeeLogin;
 @RestController
 @RequestMapping(value = "/employee")
 public class EmployeeRestController {
+    /*
     @RequestMapping(value = "/apiv0/{employeeId}", method = RequestMethod.GET)
     public Employee getEmployee(@PathVariable UUID employeeId) {
         return (new EmployeeQuery()).
                 setEmployeeId(employeeId).
                 execute();
     }
+    */
 
     @RequestMapping(value = "/apiv0/activecounts", method = RequestMethod.GET)
     public ActiveEmployeeCounts getActiveEmployeeCounts() {
         return (new ActiveEmployeeCountsQuery()).execute();
     }
 
+    /*
     @RequestMapping(value = "/apiv0/login", method = RequestMethod.PUT)
     public Employee employeeLogin(@RequestBody EmployeeLogin employeeLogin) {
         return (new EmployeeLoginCommand()).
                 setEmployeeLogin(employeeLogin).
                 execute();
     }
+     */
 
     @RequestMapping(value = "/apiv0/", method = RequestMethod.PUT)
     public Employee putEmployee(@RequestBody Employee employee) {
