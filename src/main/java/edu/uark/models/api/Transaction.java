@@ -18,11 +18,11 @@ public class Transaction {
 		return this;
 	}
 	
-	private UUID cashierId;
-	public UUID getcashierId() {
+	private String cashierId;
+	public String getCashierId() {
 		return this.cashierId;
 	}
-	public Transaction setcashierId(UUID cashierId) {
+	public Transaction setCashierId(String cashierId) {
 		this.cashierId = cashierId;
 		return this;
 	}
@@ -45,13 +45,13 @@ public class Transaction {
 		this.type = type;
 		return this;
 	}
-	
-	private UUID refId;
-	public UUID getRefId() {
+
+	private String refId;
+	public String getRefId() {
 		return this.getRefId();
 	}
 	
-	public Transaction setRefId(UUID ref) {
+	public Transaction setRefId(String ref) {
 		this.refId = ref;
 		return this;
 	}
@@ -93,10 +93,10 @@ public class Transaction {
 	
 	public Transaction() {
 		this.id = new UUID(0, 0);
-		this.cashierId = new UUID(0, 0);
+		this.cashierId = StringUtils.EMPTY;
 		this.totalAmount = 0.0;
 		this.type = "sales";
-		this.refId = new UUID(0, 0);
+		this.refId = "";
 		this.createdOn = LocalDateTime.now();
 		this.apiRequestStatus = TransactionApiRequestStatus.OK;
 		this.apiRequestMessage = StringUtils.EMPTY;
@@ -104,10 +104,10 @@ public class Transaction {
 	
 	public Transaction(TransactionEntity transactionEntity) {
 		this.id = transactionEntity.getId();
-		this.cashierId = new UUID(0, 0);
+		this.cashierId = "";
 		this.totalAmount = 0.0;
 		this.type = "sales";
-		this.refId = new UUID(0, 0);
+		this.refId = "";
 		this.createdOn = LocalDateTime.now();
 	}
 
