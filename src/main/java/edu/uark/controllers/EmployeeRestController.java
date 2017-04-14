@@ -23,7 +23,7 @@ public class EmployeeRestController {
 
     @RequestMapping(value = "/apiv0/{employeeId}", method = RequestMethod.GET)
     public Employee getEmployee(@PathVariable UUID employeeId) {
-        return (new EmployeeQuery()).
+        return (new EmployeeCheckQuery()).
                 setEmployeeId(employeeId).
                 execute();
     }
@@ -37,7 +37,7 @@ public class EmployeeRestController {
 
     @RequestMapping(value = "/apiv0/login", method = RequestMethod.PUT)
     public Employee employeeLogin(@RequestBody EmployeeLogin employeeLogin) {
-        return (new EmployeeLoginCommand()).
+        return (new EmployeeLoginQuery()).
                 setEmployeeLogin(employeeLogin).
                 execute();
     }
