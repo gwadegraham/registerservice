@@ -103,7 +103,7 @@ public class Transaction {
 	}
 	
 	public Transaction(TransactionEntity transactionEntity) {
-		this.id = transactionEntity.;
+		this.id = transactionEntity.getId();
 		this.cashierId = new UUID(0, 0);
 		this.totalAmount = 0.0;
 		this.type = "sales";
