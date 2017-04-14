@@ -23,14 +23,11 @@ public enum TransactionApiRequestStatus {
 	}
 	
 	private int value;
+	
 	private static Map<Integer, TransactionApiRequestStatus> valueMap = null;
 	
 	public int getValue() {
 		return value;
-	}
-	
-	private TransactionApiRequestStatus(int value) {
-		this.value = value;
 	}
 
 }
