@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
+    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="Fixing package errors">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeCheckQuery.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeCheckQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeSaveCommand.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeSaveCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/TransactionApiRequestStatus.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/TransactionApiRequestStatus.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1023,7 +1018,7 @@
       <workItem from="1492123118175" duration="1982000" />
       <workItem from="1492126338484" duration="242000" />
       <workItem from="1492190583166" duration="250000" />
-      <workItem from="1492190862397" duration="2542000" />
+      <workItem from="1492190862397" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1130,11 +1125,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492191948047</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixing package errors">
+      <created>1492193737018</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1492193737018</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43542000" />
+    <option name="totallyTimeSpent" value="43721000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1201,7 +1203,8 @@
     <MESSAGE value="Updated variable types for TransactionEntry" />
     <MESSAGE value="push" />
     <MESSAGE value="added '.getId()'" />
-    <option name="LAST_COMMIT_MESSAGE" value="added '.getId()'" />
+    <MESSAGE value="Fixing package errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing package errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
