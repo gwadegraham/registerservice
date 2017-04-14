@@ -12,6 +12,7 @@ import edu.uark.models.api.Employee;
 import edu.uark.models.api.Product;
 import edu.uark.models.entities.fieldnames.EmployeeFieldNames;
 import edu.uark.models.entities.fieldnames.ProductFieldNames;
+import edu.uark.models.entities.fieldnames.TransactionFieldNames;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -21,8 +22,18 @@ import edu.uark.models.repositories.ProductRepository;
 
 public class TransactionEntity extends BaseEntity<TransactionEntity> {	
 	
-	// some code here
-	// model off of product entity everything N.B
+	@Override
+	protected void fillFromRecord(ResultSet rs) throws SQLException {
+		this.recordId = rs.getString(TransactionFieldNames.RECORD_ID);
+		this.cashierId = rs.getString(TransactionFieldNames.CASHIER_ID);
+		this.totalPrice = rs.getDouble(TransactionFieldNames.TOTAL_PRICE);
+		this.transType = rs.getString(TransactionFieldNames.TRANSACTION_TYPE);
+		this.referenceId = rs.getString(TransactionFieldNames.REFERENCE_ID);
+		this.createdOn = rs.getTimestamp(TransactionFieldNames.CREATED_ON).toLocalDateTime();;
+		
+	}
+	
+	
 private String recordId;
 private String cashierId;
 private double totalPrice;
