@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/TransactionRepositoryInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/dataaccess/repository/DatabaseTable.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/dataaccess/repository/DatabaseTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,18 +19,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ActiveEmployeeCountsQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/ActiveEmployeeCountsQuery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TransactionApiRequestStatus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/enums/TransactionApiRequestStatus.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,14 +39,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TransactionRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
+            <state relative-caret-position="972">
               <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/EmployeeRepositoryInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeCheckQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/commands/employee/EmployeeLoginQuery.java" />
@@ -199,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/TransactionRepositoryInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uark/dataaccess/repository/DatabaseTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java" />
       </list>
     </option>
   </component>
@@ -1104,7 +1100,7 @@
       <workItem from="1492123118175" duration="1982000" />
       <workItem from="1492126338484" duration="242000" />
       <workItem from="1492190583166" duration="250000" />
-      <workItem from="1492190862397" duration="3723000" />
+      <workItem from="1492190862397" duration="3972000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1225,11 +1221,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492193803872</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Created TransactionRepository Class">
+      <created>1492194822995</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1492194822995</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44723000" />
+    <option name="totallyTimeSpent" value="44972000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1297,7 +1300,8 @@
     <MESSAGE value="push" />
     <MESSAGE value="added '.getId()'" />
     <MESSAGE value="Fixing package errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing package errors" />
+    <MESSAGE value="Created TransactionRepository Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created TransactionRepository Class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1583,14 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="100" column="56" lean-forward="false" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1722,11 +1718,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
+        <state relative-caret-position="972">
           <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
