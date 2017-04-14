@@ -17,6 +17,17 @@ public class Transaction {
 		this.id = id;
 		return this;
 	}
+
+	private String recordId;
+	public String getRecordId() {
+
+	    return this.recordId;
+    }
+    public Transaction setRecordId(String recordId) {
+
+	    this.recordId = recordId;
+	    return this;
+    }
 	
 	private String cashierId;
 	public String getCashierId() {

@@ -54,8 +54,8 @@
       <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="360">
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -1100,7 +1100,7 @@
       <workItem from="1492123118175" duration="1982000" />
       <workItem from="1492126338484" duration="242000" />
       <workItem from="1492190583166" duration="250000" />
-      <workItem from="1492190862397" duration="3972000" />
+      <workItem from="1492190862397" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1228,11 +1228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492194822995</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Changed cashierId and referenceId to String values">
+      <created>1492195077104</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1492195077104</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44972000" />
+    <option name="totallyTimeSpent" value="45125000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1301,7 +1308,8 @@
     <MESSAGE value="added '.getId()'" />
     <MESSAGE value="Fixing package errors" />
     <MESSAGE value="Created TransactionRepository Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created TransactionRepository Class" />
+    <MESSAGE value="Changed cashierId and referenceId to String values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed cashierId and referenceId to String values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1728,8 +1736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uark/models/api/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+        <state relative-caret-position="360">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding />
         </state>
       </provider>
