@@ -842,7 +842,7 @@
       <workItem from="1492123118175" duration="1982000" />
       <workItem from="1492126338484" duration="242000" />
       <workItem from="1492190583166" duration="250000" />
-      <workItem from="1492190862397" duration="660000" />
+      <workItem from="1492190862397" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -928,11 +928,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492191517731</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="push">
+      <created>1492191526788</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1492191526788</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41660000" />
+    <option name="totallyTimeSpent" value="41670000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
