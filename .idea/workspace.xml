@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
-    </list>
+    <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -870,7 +868,7 @@
       <workItem from="1492190583166" duration="250000" />
       <workItem from="1492190862397" duration="4125000" />
       <workItem from="1492196578150" duration="202000" />
-      <workItem from="1492196913425" duration="89000" />
+      <workItem from="1492196913425" duration="138000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1009,7 +1007,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45416000" />
+    <option name="totallyTimeSpent" value="45465000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
