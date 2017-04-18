@@ -5,8 +5,8 @@ package edu.uark.models.entities.fieldnames;
  */
 public class TransactionEntryFieldNames {
 
-    public static final String TRANSACTION_ID = "transactionId";
-    public static final String PRODUCT_ID = "productId";
-    public static final String AMOUNT_SOLD = "amountSold";
-    public static final String SOLD_PRICE = "soldPrice";
+    public static final String TRANSACTION_ID = "transactionid";
+    public static final String PRODUCT_ID = "productid";
+    public static final String AMOUNT_SOLD = "amountsold";
+    public static final String SOLD_PRICE = "soldprice";
 }
