@@ -120,6 +120,8 @@ public class Transaction {
 		this.type = "sales";
 		this.refId = "";
 		this.createdOn = LocalDateTime.now();
+		this.apiRequestStatus = TransactionApiRequestStatus.OK;
+		this.apiRequestMessage = StringUtils.EMPTY;
 	}
 
 }
