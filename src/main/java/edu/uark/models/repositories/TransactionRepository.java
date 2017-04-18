@@ -45,13 +45,34 @@ public class TransactionRepository extends BaseRepository<TransactionEntity> imp
     }
 
     @Override
-    public TransactionEntity createOne() {
+    public boolean recordIdExists(String recordId) {
+
+        return this.existsWhere(
+                new WhereContainer(
+                        new WhereClause().
+                                table(this.primaryTable).
+                                fieldName(TransactionFieldNames.RECORD_ID).
+                                comparison(SQLComparisonType.EQUALS)
+
+                ),
+                (ps) -> {
+                    try {
+                        ps.setObject(1, recordId);
+                    } catch (SQLException e) {}
+
+                    return ps;
+                }
+        );
+    }
+
+    @Override
+    public TransactionEntity createOne () {
 
         return new TransactionEntity();
     }
 
     public TransactionRepository() {
 
-        super(DatabaseTable.TRANSACTION);
+            super(DatabaseTable.TRANSACTION);
     }
 }

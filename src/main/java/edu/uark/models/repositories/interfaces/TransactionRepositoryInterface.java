@@ -9,4 +9,5 @@ import edu.uark.models.entities.TransactionEntity;
 public interface TransactionRepositoryInterface extends BaseRepositoryInterface<TransactionEntity> {
 
     public TransactionEntity byRecordId(String recordId);
+    public boolean recordIdExists(String recordId);
 }

@@ -41,7 +41,6 @@ public class EmployeeRestController {
                 setEmployeeLogin(employeeLogin).
                 execute();
     }
-     
 
     @RequestMapping(value = "/apiv0/", method = RequestMethod.PUT)
     public Employee putEmployee(@RequestBody Employee employee) {
