@@ -8,7 +8,7 @@ public enum TransactionApiRequestStatus {
 	INVALID_INPUT(1),
 	UNKNOWN_ERROR(2),
 	NOT_FOUND(3),
-	TRANSACTION_ALREADY_EXIST(4);
+	RECORD_ID_ALREADY_EXISTS(4);
 
 	public static TransactionApiRequestStatus map(int key) {
 		if (valueMap == null) {
