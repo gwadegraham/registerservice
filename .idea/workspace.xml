@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f52aaef2-e52d-4abc-a534-80c88ae49882" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/api/CreateTransaction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/commands/transaction/TransactionSaveCommand.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/commands/transaction/TransactionSaveCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/EmployeeRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/TransactionRestController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/controllers/TransactionRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/TransactionRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/TransactionRepositoryInterface.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uark/models/repositories/interfaces/TransactionRepositoryInterface.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1080,7 +1074,7 @@
       <workItem from="1492126338484" duration="242000" />
       <workItem from="1492190583166" duration="250000" />
       <workItem from="1492190862397" duration="4125000" />
-      <workItem from="1492526802163" duration="7332000" />
+      <workItem from="1492526802163" duration="7374000" />
     </task>
     <task id="LOCAL-00001" summary="Create package and class at edu.uark.commands.employee:EmployeeLoginQuery.java">
       <created>1488262147274</created>
@@ -1229,11 +1223,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492534592425</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Created 'CreateTransaction' object, and changed the TransactionSaveCommand.">
+      <created>1492538806332</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1492538806332</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52457000" />
+    <option name="totallyTimeSpent" value="52499000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1305,7 +1306,8 @@
     <MESSAGE value="Changed cashierId and referenceId to String values" />
     <MESSAGE value="Created TransactionSaveCommand." />
     <MESSAGE value="Corrected field names to match the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected field names to match the database" />
+    <MESSAGE value="Created 'CreateTransaction' object, and changed the TransactionSaveCommand." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created 'CreateTransaction' object, and changed the TransactionSaveCommand." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
