@@ -10,7 +10,7 @@ public enum TransactionApiRequestStatus {
 	NOT_FOUND(3),
 	TRANSACTION_ALREADY_EXIST(4);
 
-	public static TransactionApiRequestStatus map() {
+	public static TransactionApiRequestStatus map(int key) {
 		if (valueMap == null) {
 			valueMap = new HashMap<Integer, TransactionApiRequestStatus>();
 
