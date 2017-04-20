@@ -2,6 +2,7 @@ package edu.uark.controllers;
 
 import edu.uark.commands.employee.EmployeeSaveCommand;
 import edu.uark.commands.transaction.TransactionSaveCommand;
+import edu.uark.models.api.CreateTransaction;
 import edu.uark.models.api.Transaction;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 public class TransactionRestController {
 
     @RequestMapping(value = "/apiv0", method = RequestMethod.PUT)
-    public Transaction putTransaction(@RequestBody Transaction transaction) {
+    public Transaction putTransaction(@RequestBody CreateTransaction createTransaction) {
 
-        return new TransactionSaveCommand().
-                setApiTransaction(transaction).
-                execute();
+        //TODO : create object
+        return new TransactionSaveCommand().execute();
     }
 
     @ResponseBody
