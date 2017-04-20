@@ -28,7 +28,6 @@ public class EmployeeRestController {
                 execute();
     }
 
-
     @RequestMapping(value = "/apiv0/activecounts", method = RequestMethod.GET)
     public ActiveEmployeeCounts getActiveEmployeeCounts() {
         return (new ActiveEmployeeCountsQuery()).execute();
