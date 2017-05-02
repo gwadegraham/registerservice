@@ -35,6 +35,15 @@ public class Product {
 		this.quantity = quantity;
 		return this;
 	}
+
+	private int cost;
+	public int getCost() {
+		return this.cost;
+	}
+	public Product setCost(int cost) {
+		this.cost = cost;
+		return this;
+	}
 	
 	private LocalDateTime createdOn;
 	public LocalDateTime getCreatedOn() {
@@ -76,6 +85,7 @@ public class Product {
 		this.createdOn = LocalDateTime.now();
 		this.apiRequestMessage = StringUtils.EMPTY;
 		this.apiRequestStatus = ProductApiRequestStatus.OK;
+		this.cost = 0;
 	}
 	
 	public Product(ProductEntity productEntity) {
@@ -86,5 +96,7 @@ public class Product {
 
 		this.apiRequestMessage = StringUtils.EMPTY;
 		this.apiRequestStatus = ProductApiRequestStatus.OK;
+
+		this.cost = productEntity.getCost();
 	}
 }

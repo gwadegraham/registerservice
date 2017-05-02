@@ -20,6 +20,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		this.lookupCode = rs.getString(ProductFieldNames.LOOKUP_CODE);
 		this.quantity = rs.getInt(ProductFieldNames.QUANTITY);
 		this.createdOn = rs.getTimestamp(ProductFieldNames.CREATED_ON).toLocalDateTime();
+		this.cost = rs.getInt(ProductFieldNames.COST);
 	}
 
 	@Override
@@ -27,6 +28,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		record.put(ProductFieldNames.LOOKUP_CODE, this.lookupCode);
 		record.put(ProductFieldNames.QUANTITY, this.quantity);
 		record.put(ProductFieldNames.CREATED_ON, Timestamp.valueOf(this.createdOn));
+		record.put(ProductFieldNames.COST, this.cost);
 		
 		return record;
 	}
@@ -57,6 +59,19 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		return this;
 	}
 
+	private int cost;
+	public int getCost() {
+		return this.cost;
+	}
+	public ProductEntity setCost(int cost) {
+		if (this.cost != cost) {
+			this.cost = cost;
+			this.propertyChanged(ProductFieldNames.COST);
+		}
+
+		return this;
+	}
+
 	private LocalDateTime createdOn;
 	public LocalDateTime getCreatedOn() {
 		return this.createdOn;
@@ -77,6 +92,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		this.quantity = -1;
 		this.lookupCode = StringUtils.EMPTY;
 		this.createdOn = LocalDateTime.now();
+		this.cost = 0;
 	}
 	
 	public ProductEntity(UUID id) {
@@ -85,6 +101,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		this.quantity = -1;
 		this.lookupCode = StringUtils.EMPTY;
 		this.createdOn = LocalDateTime.now();
+		this.cost = 0;
 	}
 
 	public ProductEntity(Product apiProduct) {
@@ -94,5 +111,7 @@ public class ProductEntity extends BaseEntity<ProductEntity> {
 		this.lookupCode = apiProduct.getLookupCode();
 
 		this.createdOn = LocalDateTime.now();
+
+		this.cost = apiProduct.getCost();
 	}
 }
